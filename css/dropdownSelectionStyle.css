@@ -1,0 +1,25 @@
+.tm-dropdown-selection{
+  width: 120px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 2px;
+  border: 2px solid #d4d6db;
+  display: inline-block;
+  height: 35px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.tm-dropdown-selection__select{
+  padding: 0 30px 0 10px;
+  box-sizing: border-box;
+  font-size: 14px /* add PX (or original value) as backup */;
+  border: none;
+  color: #696f7a;
+  background-color: #fff;
+  font-weight: 600;
+  height: 100%;
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}

@@ -1,0 +1,167 @@
+.togglePanel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.togglePanel .togglePanel_lef-space {
+  width: 180px;
+}
+
+.togglePanel .togglePanel_content{
+  width: 60%;
+  border: 2px solid #e4e4e4;
+  margin-bottom: 10px;
+  margin-top: 6px;
+  padding: 5px;
+}
+
+.togglePanel .togglePanel_content .togglePanel_content-actionsPanel{
+  margin-bottom: 10px;
+  text-align: left;
+  font-size: 14px;
+  padding: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  max-width: 100%;
+}
+
+.togglePanel .togglePanel_content .togglePanel_inputSearch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  max-width: 100%;
+}
+
+.togglePanel .togglePanel_content .togglePanel_inputSearch .togglePanel_inputSearch-input {
+  font-size: 14px;
+  box-sizing: border-box;
+  border: 2px solid #f9f9f9;
+  background-color: #fff;
+  padding: 2px 12px 2px 12px;
+  border-radius: 3px;
+  width: 100%;
+  height: 28px;
+  color: #696f7a;
+  outline: none !important;
+}
+
+.togglePanel .togglePanel_content .togglePanel_closePanel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: auto;
+  text-align: center;
+  margin-left: 20px;
+  border-radius: 15px !important;
+  border: 2px solid #e4e4e4;
+  cursor: pointer;
+}
+
+.togglePanel .togglePanel_content .togglePanel_content-elementList{
+  height: 150px !important;
+}
+
+.togglePanel .tagStyle{
+  background: #4882ab;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 10px;
+  height: 21px;
+  border-radius: 100px !important;
+  color: #fff;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 21px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.tag-item_struct{
+  background: #4882ab;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 10px;
+  height: 21px;
+  border-radius: 100px !important;
+  color: #fff;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 21px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.tag-item{
+  margin: 2px 5px 3px 0px;
+}
+
+.remove-tag{
+  display: inline-block;
+}
+
+.remove-tag i{
+  font-size: 15px;
+}
+
+.footer-btn{
+  display: flex;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.add-new-tag-btn{
+  background: #e6e8ec;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.row-double-line{
+  background-color: #00BCD4;
+  display: grid;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 10px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  border-radius: 100px !important;
+}
+
+.row-double-line .row-double-line_font {
+  color: #fff !important;
+  font-weight: 600 !important;
+  font-size: 12px !important;
+  line-height: 21px !important;
+}

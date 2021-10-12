@@ -1,0 +1,11 @@
+#content #select_period {margin: 20px;}
+#content #select_period p{width: 250px;}
+#content #select_period p h5{float: left;}
+#content #select_period p input{float: right;}
+#content #select_period p button{width: 100%;}
+
+#content #select_period2 {margin: 20px;}
+#content #select_period2 p{width: 250px;}
+#content #select_period2 p h5{float: left;}
+#content #select_period2 p input{float: right;}
+#content #select_period2 p button{width: 100%;}

@@ -1,0 +1,15 @@
+section.ms_modal {  position: fixed; top: 0; right: 0; bottom: 0; left: 0; user-select: none; -webkit-touch-callout: none!important; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; -webkit-user-drag: none; }
+div.ms-click-outside-layer {  background: rgba(0,0,0,.35); animation: fade-in .2s ease-out; position: fixed; top: 0; right: 0; bottom: 0; left: 0; cursor: default; transition: background-color .2s; }
+section.ms_modal div.ms_modal__content {  width: 80%; height: 90%; position: absolute; top: 50%; left: 50%; padding: 40px 0px 0px 0px; min-width: 200px; min-height: 100px; border-radius: 10px!important; background-color: #fff; box-shadow: 0 1px 4px 0 rgba(0,0,0,.5); color: #464c59; transform: translate(-50%,-50%); }
+section.ms_modal div.ms_modal__exitBtn { position: absolute; top: 0; right: 0; color: #b0b4bb; -webkit-tap-highlight-color: transparent; display: inline-block; cursor: pointer; }
+section.ms_modal div.ms_modal__exitBtn i{  display: block; padding: 15px; font-size: 20px; speak: none; font-style: normal; font-variant: normal; text-transform: none; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+section.ms_modal div.ms_modal-content {  display: -ms-flexbox; display: flex; -ms-flex: 1; flex: 1; -ms-flex-direction: column; flex-direction: column; -ms-flex-pack: justify; justify-content: space-between; width: 100%; height: 100%; }
+section.ms_modal div.ms_modal-content header { width: 100%; text-align: center; }
+section.ms_modal div.ms_modal-content header span { color: #464c59; font-weight: 600; font-size: 18px; }
+section.ms_modal div.ms_modal-content div.ms_modal-content__body{ display: -ms-flexbox; position: relative; display: flex; -ms-flex-direction: column; flex-direction: column; -ms-flex-pack: start; justify-content: flex-start; -ms-flex-align: center; align-items: center; color: #464c59; overflow: hidden; width: 100%; height: 100%; }
+
+@media (max-width: 992px) {
+  div.ms-click-outside-layer { display: none; }
+  section.ms_modal div.ms_modal__content { width: 100%; height: 100%; padding: 25px 0px 0px 0px; }
+  section.ms_modal div.ms_modal__exitBtn i{ padding: 8px; }
+}

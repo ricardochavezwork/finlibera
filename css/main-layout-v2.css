@@ -1,0 +1,1047 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : 16-Oct-2017, 15:18:10
+    Author     : Ricardo
+*/
+#wrapper, .main-layout {
+    position: absolute !important;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.main-layout_top-nav {
+    top: 0;
+    right: 0;
+    left: 45px;
+    z-index: 2;
+    height: 45px;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.4);
+}
+
+.main-layout > * {
+    position: absolute;
+    transition: 0.2s ease-in-out;
+}
+
+.top-nav-v2 {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    color: #bbdaef;
+    font-size: 18px;
+}
+
+.top-nav-v2__left, .top-nav-v2__right{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.top-nav-v2__left > * {
+    margin-left: 10px;
+}
+
+.ms-logo-container{
+    position: relative;
+}
+
+.ms-logo-container img{
+    height: 29px;
+    width: auto;
+}
+
+.main-layout_content {
+    top: 45px;
+    right: 0;
+    bottom: 0;
+    left: 45px;
+    z-index: 0;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+section {
+    display: block;
+}
+
+.sub-layout {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.sub-layout__header {
+    position: relative;
+    flex: none;
+    z-index: 2;
+}
+
+.sub-layout__content {
+    position: relative;
+    flex: 1 1;
+    overflow: auto;
+    z-index: 1;
+    contain: strict;
+    -webkit-overflow-scrolling: touch;
+}
+
+.project-header {
+    position: relative;
+    height: 48px;
+    background: #fff;
+    box-shadow: 0 1px 0 0 rgba(29,34,43,0.1);
+    color: #fff;
+}
+
+.project-header__left {
+    left: 0;
+    justify-content: flex-start;
+    max-width: 560px;
+}
+
+.project-header__center {
+    justify-content: center;
+}
+
+.project-header__right {
+    right: 5px;
+    justify-content: flex-end;
+}
+
+.project-header__left, .project-header__right{
+    position: absolute;
+    top: 0;
+}
+
+.project-header__left, .project-header__center, .project-header__right{
+    display: flex;
+    height: 48px;
+}
+
+.project-header__nav-item{
+    display: block;
+    box-sizing: border-box;
+    padding: 0 15px;
+    height: 48px;
+    color: #696f7a;
+    font-size: 14px;
+    line-height: 48px;
+    white-space: nowrap;
+}
+
+.ms-link{
+    outline: none !important;
+    text-decoration: none !important;
+    font-family: inherit !important;
+    transition: none !important;
+}
+
+.ms-link:hover{
+    font-weight: bold;
+}
+
+.sub-layout__content::-webkit-scrollbar {
+  background: transparent;
+  width: 12px;
+  height: 12px;
+}
+.sub-layout__content::-webkit-scrollbar-track {
+  background: #f3f4f5;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+}
+.sub-layout__content::-webkit-scrollbar-thumb {
+  background: #b0b4bb;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+}
+.sub-layout__content::-webkit-scrollbar-thumb:hover {
+  background: #c1c4cb;
+}
+
+@media(max-width:992px) {
+    .main-layout .main-layout_top-nav {
+        left: 0;
+        height: 50px;
+    }
+
+    .main-layout .main-layout_content {
+        left: 0;
+        /*height: 50px;*/
+    }
+
+    .project-header__center {
+      justify-content: baseline;
+    }
+}
+
+@media (max-width:992px) {
+  .kanban-board-render .kanban-lists {
+    margin: 15px !important;
+  }
+}
+
+.fixed-header-layout{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.fixed-header-layout__header{
+    right: 0px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    transition: all 0.3s;
+}
+
+.fixed-header-layout__contents{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.ms-scrollable-layout{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.ms-scrollable-layout::-webkit-scrollbar {
+  background: transparent;
+  width: 8px;
+  height: 8px;
+}
+.ms-scrollable-layout::-webkit-scrollbar-track {
+  background: #f3f4f5;
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+}
+.ms-scrollable-layout::-webkit-scrollbar-thumb {
+  background: #b0b4bb;
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+}
+.ms-scrollable-layout::-webkit-scrollbar-thumb:hover {
+  background: #c1c4cb;
+}
+
+.fixed-header-layout__sizer{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 1px;
+    pointer-events: none;
+}
+
+/*
+    KanbanBoardRender.styl
+*/
+
+.kanban-board-render{
+    -webkit-touch-callout: none !important /* Safari for iOS */;
+    -webkit-user-select: none /* Chrome, Safari for Mac, Opera */;
+    -moz-user-select: none /* Firefox */;
+    -ms-user-select: none /* Internet Explorer, Edge */;
+    user-select: none;
+    overflow: hidden;
+    margin-top: 5px;
+    outline: none;
+    color: #fff;
+}
+
+.kanban-board-render .kanban-lists{
+    margin: 60px 50px 0;
+}
+
+.kanban-board-render .kanban-list{
+    padding-bottom: 2px;
+}
+
+.ms-list-wide{
+    margin-bottom: 5px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 3px;
+    box-shadow: 0 1px 8px 0 rgba(0,0,0,0.15);
+    color: #464c59;
+    transform: translateZ(0);
+}
+
+.ms-list-wide__frame-top, .ms-list-wide__kanban-item{
+    flex-shrink: 0;
+    opacity: 1;
+    transition: 0.3s opacity;
+}
+
+.ms-list-wide .kanban-items{
+    display: block;
+    flex: 0 1 auto;
+}
+
+.kanban-items{
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+}
+
+.ms-list-wide .kanban-item {
+  border-bottom: 2px solid #e6e8ec;
+}
+.ms-list-wide .kanban-item:first-of-type {
+  border-top: 2px solid #e6e8ec;
+}
+
+/*
+    BEGIN : SCROLLBAR
+*/
+
+.ms-hack-scrollbar{
+    -webkit-overflow-scrolling: touch;
+}
+
+::scrollbar {
+  width: 8px;
+  background: transparent;
+}
+::scrollbar-track {
+  width: 8px;
+  background: #f3f4f5;
+}
+::scrollbar-thumb {
+  width: 8px;
+  border-radius: 10px;
+  background: #d4d6db;
+}
+.ms-hack-scrollbar {
+  -webkit-overflow-scrolling: touch;
+}
+.ms-hack-scrollbar::-webkit-scrollbar {
+  background: transparent;
+  width: 8px;
+  height: 8px;
+}
+.ms-hack-scrollbar::-webkit-scrollbar-track {
+  background: #f3f4f5;
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+}
+.ms-hack-scrollbar::-webkit-scrollbar-thumb {
+  background: #b0b4bb;
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+}
+.ms-hack-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #c1c4cb;
+}
+
+/* END : SCROLLBAR*/
+
+.ms-list-header{
+    position: relative;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    padding: 0 5px;
+    height: 43px;
+    border-radius: 2px 2px 0 0;
+    background: #1f5c87;
+    font-weight: 600;
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    -webkit-touch-callout: none !important /* Safari for iOS */;
+    -webkit-user-select: none /* Chrome, Safari for Mac, Opera */;
+    -moz-user-select: none /* Firefox */;
+    -ms-user-select: none /* Internet Explorer, Edge */;
+    user-select: none;
+}
+
+.ms-list-header{
+    padding: 0 25px;
+    background-color: #fff;
+    cursor: pointer;
+    border-radius: 2px 2px 0 0;
+    background: #1f5c87;
+    color: #fff;
+}
+
+.ms-list-header__left{
+    flex: 1 1;
+    overflow: hidden;
+    padding-right: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.ms-list-header__right{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: 5px;
+}
+
+.ms-list-header__right i{
+    font-size: 15px;
+    padding: 10px;
+}
+
+/*tw-editable-textfield__text-container*/
+.ms-textfield__text-container{
+    display: flex;
+    padding: 0 5px;
+    word-break: break-word;
+}
+
+.ms-text-container{
+    display: flex;
+    padding: 0 5px;
+    word-break: break-word;
+}
+
+.ms-list-header .ms-text-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 28px;
+    border-radius: 2px;
+}
+
+.ms-list-header .ms-textfield__text-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 28px;
+    border-radius: 2px;
+}
+
+.ms-textfield__text{
+    flex: 1 1 auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: normal;
+}
+
+.ms-textfield__text-container .ms-textfield__text{
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+span.section_selected {
+    border-bottom: 2px solid rgb(39, 119, 186);
+    color: rgb(39, 119, 186);
+    font-weight: bold;
+}
+
+/* FLOATING PANEL V.1.2 */
+
+.tm-floating-panel-desktop-v2{
+    position: absolute;
+    top: 49px;
+    right: 0;
+    bottom: 0;
+    z-index: 50;
+    /*width: 575px !important;*/
+    transition: 0.2s opacity;
+    transform: translate3d(0, 0, 0);
+}
+
+.tm-property-tabs__tabs-v2{
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    height: 43px;
+    border-bottom: #d4d6db 1px solid;
+    font-size: 14px;
+}
+
+.tm-property-tabs__tab-v2{
+    flex: 1;
+    box-sizing: border-box;
+    height: 100%;
+    border-bottom: solid 2px #fff;
+    background-color: #fff;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.tm-property-tabs__tabs-v2 > div.tm-property-tabs__tab-v2.ax-transaction-properties-tab.active{
+    border-bottom: 2px solid #14699b !important;
+}
+
+/*
+######## CHARTIST.JS #########
+*/
+
+.stats-totFt-vs-totInRitardo .ct-chart .ct-series-a .ct-slice-pie{
+    fill : #31b8f5;
+}
+
+.stats-totFt-vs-totInRitardo .ct-chart .ct-series-b .ct-slice-pie{
+    fill : #f5eb31;
+}
+
+.stats-totFt-vs-totInRitardo .ct-chart .ct-series-c .ct-slice-pie{
+    fill : #ff6d61;
+}
+
+/*
+    #### Floating Action Button ####
+*/
+
+div.fixed-action-btn.materializecss {
+    bottom: 45px;
+    right: 24px;
+    padding-top: 15px;
+    margin-bottom: 0;
+    z-index: 997;
+    position: fixed;
+}
+
+.materializecss a.btn-floating {
+    background-color: #14699b;
+    width: 56px;
+    height: 56px;
+    padding: 0;
+    line-height: 54px;
+    font-size: 15px;
+    display: inline-block;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: background-color .3s;
+    cursor: pointer;
+    vertical-align: middle;
+    border-radius: 50% !important;
+}
+
+.materializecss a i.material-icons{
+    line-height: 56px;
+    font-size: 2.6rem;
+    width: inherit;
+    display: inline-block;
+    text-align: center;
+    color: #fff;
+}
+
+/* ###### */
+
+div.booking-section div.b-container-layout > *{
+    margin-bottom: 30px;
+}
+
+div.booking-section div.b-container-layout div.booking-details-form{
+    padding: 30px;
+    background-color: #ffffff;
+    border: 1px solid #cbcbcb;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: stretch;
+    align-content: center;
+}
+
+div.booking-section div.b-container-layout div.booking-details-form__row{  display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space-around; align-items: stretch; align-content: center; position: relative; width: 100%; height: auto; }
+
+div.booking-section div.booking-details-form__contractType{
+    border: solid 2px #6998bb;
+    padding: 5px;
+    margin-bottom: 10px;
+    color: #18679b;
+    font-weight: bold;
+    text-align: center;
+}
+
+div.booking-section div.b-container-layout div.booking-personal-info{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: stretch;
+    align-content: center;
+}
+
+div.booking-section div.b-container-layout div.booking-personal-info__body, div.booking-section div.b-container-layout div.booking-intestazione-info__body{
+    padding: 30px; background-color: #ffffff; border: 1px solid #cbcbcb; display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: space-around; align-items: stretch; align-content: center;
+}
+
+div.booking-section div.b-container-layout div.booking-intestazione-info__body{
+    display: none;
+}
+
+div.booking-section div.b-container-layout div.booking-personal-info div.booking-personal-info_tab-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+}
+
+div.booking-section div.b-container-layout div.booking-personal-info div.booking-personal-info_tab-row__btn{
+    width: 135px; padding: 10px; background-color: #6998bb; color: #ffffff; display: flex; justify-content: center; cursor: pointer;
+}
+
+div.booking-section div.b-container-layout div.booking-personal-info div.booking-personal-info__row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    align-content: center;
+    justify-content: flex-start;
+}
+
+div.booking-section{
+    font-weight: 300;
+    color: #17689b;
+}
+
+div.booking-section div.error-message, div.booking-section div.alert-message{
+    padding: 30px;
+    background-color: #ffffff;
+    border: 1px solid #cbcbcb;
+    /*display: flex;*/
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: stretch;
+    align-content: center;
+    display: none;
+}
+
+div.booking-section div.error-message div.error-message_errors, div.booking-section div.alert-message div.alert-message_errors{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+div.booking-section div.error-message div.error-message_errors{
+    color: #ff4b00;
+}
+
+div.booking-section div.alert-message div.alert-message_errors{
+    color: #276fa7;
+}
+
+div.alert-message div.alert-message_title, div.error-message div.error-message_title{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+}
+
+div.alert-message_title i.material-icons{
+    color: #ffb500;
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+div.error-message_title i.material-icons{
+    color: #ff4b00;
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+div.form-fields div.form-fields__title{
+    color: #696f7a;
+    font-size: 22px;
+    font-family: Open Sans;
+    font-weight: 300;
+    margin-bottom: 7px;
+}
+
+div.booking-details-form div.booking-details-form__column, div.booking-personal-info div.booking-personal-info__column{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    align-content: center;
+    justify-content: stretch;
+}
+
+div.booking-details{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+    align-content: stretch;
+}
+
+div.booking-details-form__column div.booking-details-form_row-field, div.booking-personal-info div.booking-personal-info_row-field{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+}
+
+div.booking-details-form__column div.booking-details-form_row-btn, div.booking-personal-info div.booking-personal-info_btn{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-content: stretch;
+}
+
+div.booking-details-form__column div.booking-details-form_row-btn span, div.booking-personal-info div.booking-personal-info_btn span{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+div.booking-details-form__column div.divider{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-content: stretch;
+    height: 44px;
+}
+
+div.booking-details-form__column div.booking-details-form_row-field input, div.booking-personal-info div.booking-personal-info_row-field input{
+    margin: 0;
+    line-height: 1.8em;
+    color: #17689b;
+    font-size: 14px;
+    box-sizing: border-box;
+    text-align: left;
+    border: 1px solid #cbcbcb;
+    border-radius: 4px !important;
+    box-shadow: none;
+    font-family: 'Open Sans', sans-serif;
+    -webkit-box-shadow: none;
+}
+
+div.booking-details-form__column div.toggleFields.toggleFields_hide, div.booking-personal-info div.toggleFields.toggleFields_hide {
+    display: none;
+}
+
+div.booking-personal-info div.booking-personal-info__row div.booking-personal-info__column:first-child {
+    margin-right: 10%;
+}
+
+div.b-container-layout div.send-section, div.b-container-layout div.alert-actions-section{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-end;
+    align-content: stretch;
+}
+
+div.b-container-layout div.btn-actions{
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: stretch;
+    border-radius: 20px !important;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    flex-direction: row;
+    justify-content: center;
+}
+
+div.b-container-layout div.send-section div.send-section_btn{
+    background-color: #17689b;
+    border: 1px solid #cbcbcb;
+    color: #ffffff;
+}
+
+div.b-container-layout div.send-section div.preview-section_btn{
+    background-color: #28b145;
+    border: 1px solid #cbcbcb;
+    color: #ffffff;
+}
+
+div.b-container-layout div.send-section div.save-section_btn{
+    background-color: #c1c1c1;
+    border: 1px solid #cbcbcb;
+    color: #ffffff;
+}
+
+div.b-container-layout div.alert-actions-section div.alert-actions_confirm{
+    background-color: #ffb500;
+    border: 1px solid #ffb500;
+    color: #ffffff;
+}
+
+div.b-container-layout div.alert-actions-section div.alert-actions_back{
+    background-color: #9c9c9c;
+    border: 1px solid #cbcbcb;
+    color: #ffffff;
+}
+
+div.booking-section div.b-container-layout div.alert-actions-section {
+    display: none;
+}
+
+/* Desktops */
+@media(min-width:1000px) {
+    .tm-floating-panel-desktop-v2{
+        width: 40%;
+    }
+
+    div.booking-section {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-items: stretch;
+        align-content: center;
+    }
+
+    div.booking-section div.img-container{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-items: stretch;
+        align-content: center;
+        /*max-width: 25%;*/
+    }
+
+    div.b-sidebar-layout {
+        width: 25%;
+    }
+
+    div.b-container-layout{
+        width: 50%;
+    }
+
+    div.booking-section div.b-container-layout div.booking-details-form{
+        min-width: 60%;
+    }
+
+    div.booking-details-form div.booking-details-form__column{
+        justify-content: flex-start;
+    }
+
+    div.b-container-layout div.btn-actions{
+        width: 45%;
+    }
+
+    div.booking-section div.b-container-layout div.send-section, div.booking-section div.b-container-layout div.alert-actions-section{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+}
+
+/* Smartphones */
+@media(max-width:1000px) {
+
+    .tm-floating-panel-desktop-v2{
+        width: 90%;
+    }
+
+    div.booking-section {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-items: center;
+        align-content: center;
+    }
+
+    div.booking-section div.img-container{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-items: stretch;
+        align-content: center;
+    }
+
+    div.b-container-layout{
+        margin-top: 30px;
+    }
+
+    div.booking-section div.b-container-layout, div.booking-section div.booking-details-form, div.booking-section div.b-container-layout div.booking-details-form{
+        width: 100%;
+    }
+
+    div.booking-section div.b-container-layout div.booking-details-form{
+        padding: 20px;
+        margin-top: 10px;
+        justify-content: center;
+    }
+
+    div.booking-details-form__column div.booking-details-form_row-field input, div.booking-details-form__column div.booking-details-form_row-field select{
+        max-width: 70%;
+    }
+
+    div.booking-details-form div.booking-details-form__column{
+        justify-content: stretch;
+        max-width: 45%;
+    }
+
+    div.booking-section div.b-container-layout div.booking-personal-info div.booking-personal-info__row.double-direction{
+        flex-direction : column;
+    }
+
+    div.booking-section div.b-container-layout div.send-section, div.booking-section div.b-container-layout div.alert-actions-section{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    div.double-direction div.booking-personal-info__column{
+        max-width: 100%!important;
+        margin-right: 0px!important;
+    }
+
+    div.double-direction div.booking-personal-info__column input{
+        width: 100%!important;
+    }
+
+    div.booking-section div.b-container-layout div.booking-personal-info__body, div.booking-section div.b-container-layout div.booking-intestazione-info__body{
+        padding : 20px!important
+    }
+
+    div.booking-personal-info div.booking-personal-info_row-field input, div.booking-personal-info div.booking-personal-info_row-field select{
+        width: 90%;
+    }
+
+    div.b-container-layout div.send-section div.send-section_btn, div.b-container-layout div.send-section div.save-section_btn, div.b-container-layout div.send-section div.preview-section_btn, div.b-container-layout div.alert-actions-section div.alert-actions_confirm, div.b-container-layout div.alert-actions-section div.alert-actions_back{
+        width: 65%;
+        margin-bottom: 20px;
+    }
+
+}
+
+div.booking-section div.img-container img {
+        width: 100%;
+        height: 100%;
+}
+
+div.booking-article {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-items: stretch;
+        align-content: center;
+        background-color: #ffffff;
+        color: #7b7b7b;
+        padding: 10px;
+        font-weight: 300;
+        border-bottom: 5px solid #17689bad;
+}
+
+div.booking-article span.booking-room__price {
+        font-weight: bold;
+}
+
+div.kb-row-v2_bottom div.kb-sub-rows_row {  display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: space-around; align-items: stretch; align-content: flex-start; color: #8f939c; }
+div.kb-row-v2_bottom div.kb-sub-rows_row div.kb-sub-rows_row-top { display: flex; flex-direction: row;  flex-wrap: nowrap; justify-content: flex-start; align-items: stretch; align-content: stretch;  border-bottom: 2px solid #e6e8ec; background-color: #fff; box-shadow: 0 1px 8px 0 rgba(0,0,0,0.15); transform: translateZ(0); }
+div.kb-row-v2_bottom div.kb-sub-rows_row div.kb-sub-rows_row-bottom { margin-top: 25px; display: none; flex-wrap: nowrap; justify-content: center; align-items: center; align-content: flex-start; color: #8f939c; flex-direction: column; }
+div.kb-row-v2_bottom div.kb-sub-rows_row div.kb-sub-rows_row-bottom.sub-rows__toggle, div.kb-row-v2_bottom div.kb-sub-rows_row div.kb-sub-rows_row-bottom div.kb-sub-rows-btn.sub-rows__toggle { display: flex; }
+div.kb-row-v2_bottom div.kb-sub-rows_row div.kb-sub-rows_row-bottom div.kb-sub-rows_row-bottom__row { width: 95%; display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space-around; align-items: stretch; align-content: flex-start; }
+div.kb-row-v2_bottom div.kb-sub-rows_row div.kb-sub-rows_row-bottom div.kb-sub-rows-btn {  background-color: #05a8f3; border: 1px solid #cbcbcb; color: #ffffff; display: none; flex-wrap: nowrap; align-items: center; align-content: stretch; border-radius: 20px !important; font-size: 12px; font-weight: bold; cursor: pointer; flex-direction: row; justify-content: center; padding: 11px; box-shadow: 0 1px 8px 0 rgba(0,0,0,0.15); transform: translateZ(0); }
+div.kb-row-v2_bottom div.kb-sub-rows_row div.kb-sub-rows_row-bottom div.kb-sub-rows-btn.sub-rows-btn__red { background-color: #e64646; }
+div.kb-row-v2_bottom div.kb-sub-rows_row div.kb-sub-rows_row-bottom > div:last-child { margin-bottom: 25px; }
+
+/*
+    ## BEGIN : Kanban Rows v.1.2 ##
+*/
+/* Desktops */
+@media(min-width:1000px) {
+    div.kanban-lists div.kanban-items div.kb-row-v2 div.kb-row-v2_top { flex-direction: row; }
+    div.kanban-lists div.kanban-items div.kb-row-v2 .kb-row-v2_top__sub-left {  flex-grow: 1; flex-basis: 0; }
+    div.kanban-lists div.kanban-items div.kb-row-v2 div.kb-row-v2_top__sub-right { margin-left: 25px; }
+    div.kanban-lists div.kanban-items div.kb-row-v2 .kb-row-v2_top__sub-left, div.kanban-lists div.kanban-items div.kb-row-v2 .kb-row-v2_top__sub-right { flex-direction: row; }
+    div.kanban-lists div.kanban-items div.kb-row-v2 div.kb-row-v2_left { flex-direction: row; }
+    div.kanban-lists div.kanban-items div.kb-row-v2 div.kb-row-v2_right { width: 15%; }
+    div.kanban-lists div.kanban-items div.kb-row-v2 div.kb-row-v2_col {  flex-grow: 1; flex-basis: 0; }
+    div.kb-row-v2_bottom div.kb-sub-rows_row { width: 95%; }
+}
+
+/* Smartphones */
+@media(max-width:1000px) {
+    div.kanban-lists div.kanban-items div.kb-row-v2 div.kb-row-v2_top { flex-direction: column; }
+    div.kanban-lists div.kanban-items div.kb-row-v2 .kb-row-v2_top__sub-left, div.kanban-lists div.kanban-items div.kb-row-v2 .kb-row-v2_top__sub-right { flex-direction: column; }
+    div.kanban-lists div.kanban-items div.kb-row-v2 div.kb-row-v2_left { flex-direction: column; width: unset; }
+    div.kanban-lists div.kanban-items div.kb-row-v2 div.kb-row-v2_right { width: unset; }
+    div.kanban-lists div.kanban-items div.kb-row-v2 div.kb-row-v2_col {  flex-grow: unset; flex-basis: unset; }
+    div.kb-row-v2_bottom div.kb-sub-rows_row{ white-space: nowrap; overflow: auto; place-content: stretch flex-start!important;  flex-direction: column; width: 100%; }
+    div.prop-btn-section a { width: 100%; padding: 5px 0px; }
+    div.kb-row-v2_bottom div.kb-sub-rows_row div.kb-sub-rows_row-bottom div.kb-sub-rows_row-bottom__row { flex-direction: column; }
+    div.kb-row-v2_bottom div.kb-sub-rows_row div.kb-sub-rows_row-bottom div.kb-sub-rows-btn { margin: 10px 0px; }
+    div.kb-row-v2_bottom div.kb-sub-rows_row div.kb-sub-rows_row-top { flex-direction: column; }
+}
+
+div.kanban-lists div.kanban-items div.kb-row-v2{ display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: space-around; align-items: stretch; align-content: flex-start; color: #8f939c; }
+div.kanban-lists div.kanban-items div.kb-row-v2 div.kb-row-v2_top { display: flex; flex-wrap: nowrap; justify-content: flex-start; align-items: stretch; align-content: stretch; }
+div.kanban-lists div.kanban-items div.kb-row-v2 .kb-row-v2_top__sub-left, div.kanban-lists div.kanban-items div.kb-row-v2 .kb-row-v2_top__sub-right, div.kanban-lists div.kanban-items div.kb-row-v2 div.kb-row-v2_bottom{  display: flex; flex-wrap: nowrap; justify-content: space-between; align-content: flex-start; }
+div.kanban-lists div.kanban-items div.kb-row-v2 .kb-row-v2_top__sub-left, div.kanban-lists div.kanban-items div.kb-row-v2 .kb-row-v2_top__sub-right { align-items: stretch; border-bottom: 2px solid #e6e8ec; background-color: #fff; box-shadow: 0 1px 8px 0 rgba(0,0,0,0.15); transform: translateZ(0); }
+div.kanban-lists div.kanban-items div.kb-row-v2 div.kb-row-v2_btn_select { display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: center; align-items: center; align-content: stretch; padding: 20px; cursor : pointer;}
+div.kanban-lists div.kanban-items div.kb-row-v2 div.kb-row-v2_left { display: flex; flex-wrap: nowrap; justify-content: space-between; align-items: stretch; align-content: flex-start; width: 100%; }
+div.kanban-lists div.kanban-items div.kb-row-v2 div.kb-row-v2_right { display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space-around; align-items: center; align-content: flex-start; }
+div.kanban-lists div.kanban-items div.kb-row-v2 div.kb-row-v2_col { display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: space-around; align-items: stretch; align-content: flex-start; padding: 10px 20px; }
+div.kanban-lists div.kanban-items div.kb-row-v2 div.kb-row-v2_info { cursor : pointer; display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: flex-start; align-items: center; align-content: flex-start; padding: 5px 0px; }
+div.kanban-lists div.kanban-items div.kb-row-v2 div.kb-row-v2_info i, div.kanban-lists div.kanban-items div.kb-row-v2 div.kb-row-v2_info strong { margin-right: 10px; }
+div.kanban-lists div.kanban-items div.kb-row-v2 div.kb-row-v2_bottom { flex-direction: column; align-items: center; display: none; }
+div.kanban-lists div.kanban-items div.kb-row-v2 div.kb-row-v2_bottom.toggleIns > div:last-child, div.kanban-lists div.kanban-items div.kb-row-v2 div.kb-row-v2_bottom.kb-sub-rows_toggle > div:last-child { margin-bottom: 25px; }
+div.kanban-lists div.kanban-items div.kb-row-v2 div.kb-row-v2_bottom.toggleIns, div.kanban-lists div.kanban-items div.kb-row-v2 div.kb-row-v2_bottom.kb-sub-rows_toggle { margin-top: 25px; display: flex; }
+div.kanban-lists div.kanban-items div.kb-row-v2 div.kb-row-v2_top__sub-right { display: none; }
+div.kanban-lists div.kanban-items div.kb-row-v2 div.kb-row-v2_info.cursor_default { cursor: default; -webkit-user-select: text; user-select: text; }
+
+/*
+    ## END : Kanban Rows v.1.2 ##
+*/
+
+i.icons-ms { font-size: 22px!important; min-width: 28px; }

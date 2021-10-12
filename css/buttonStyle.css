@@ -1,0 +1,44 @@
+.tm-button {
+  /*width: 60px;
+  height: 28px;
+  background-color: #fff;
+  color: #696f7a;
+  padding: 0;
+  text-align: center;*/
+  border-radius: 2px;
+  box-sizing: border-box;
+  line-height: 28px;
+  min-height: 28px;
+  padding: 0 13px;
+  color: #fff;
+  border: 0;
+  outline: 0;
+  background-color: #2798D0;
+  transition: all 0.1s;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+}
+.tm-button:hover {
+  color: #fff;
+  background-color: #14699B;
+}
+.tm-button.sizeLarge{
+  font-weight: 600;
+  height: 42px;
+  line-height: 42px;
+  min-height: 42px;
+  font-size: 14px /* add PX (or original value) as backup */;
+}
+.tm-button.fill{
+  width: 100%;
+}
+.tm-button.white{
+  background-color: #FFFFFF;
+  color: #14699B;
+}
+.tm-button.white:hover {
+  color: #FFFFFF;
+  background-color: #14699B;
+}

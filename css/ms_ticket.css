@@ -1,0 +1,92 @@
+div.ms_ticket {  display: -ms-flexbox; position: relative; display: flex; -ms-flex-direction: column; flex-direction: column; -ms-flex-pack: start; justify-content: flex-start; -ms-flex-align: center; align-items: center; color: #464c59; overflow: hidden; width: 100%; height: 100%; }
+div.ms_ticket__tabs-header { display: flex; height: 48px; justify-content: center; overflow-x: auto; overflow-y: hidden; width: 100%; box-shadow: 0 1px 0 0 rgba(29,34,43,0.1); }
+span.ms_ticket__tabs-item {  display: block; box-sizing: border-box; padding: 0 15px; height: 100%; color: #696f7a; font-size: 14px; line-height: 48px; white-space: nowrap; }
+div.ms_ticket__body {  overflow-y: auto; background-color: rgb(242, 246, 250); display: flex; width: 100%; height: 100%; padding: 15px;  flex-direction: column; flex-wrap: nowrap; justify-content: flex-start; align-items: stretch; align-content: stretch; border-radius: 10px!important; }
+span.section_selected {  border-bottom: 2px solid rgb(39, 119, 186); color: rgb(39, 119, 186)!important; font-weight: bold; }
+
+/**
+  * Fields
+  */
+div.data_card_title {  padding: 20px; font-weight: bold; font-size: 17px; color: #414B5A; }
+div.data_card-sections {  display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: flex-start; align-items: stretch; align-content: stretch; }
+div.data_card-sections div.data_card-sections__section:not(:last-child){  border-right: 2px solid #d9dadc; margin-right: 15px; padding-right: 15px; }
+div.data_card-sections__section {  display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: flex-start; align-items: stretch; align-content: stretch; flex-grow: 1; flex-basis: 0; }
+div.data_card-row {  display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space-between; align-items: stretch; align-content: stretch; margin-bottom: 10px; }
+div.data_card-row div.data_card-row__col{  display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: space-around; align-items: flex-start; align-content: stretch; flex-grow: 2; flex-basis: 0; }
+div.data_card-row div.data_card-row__multi-cols{  display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space-around; align-items: flex-start; align-content: stretch; flex-grow: 1; flex-basis: 0;}
+div.data_card-row div.data_card-row__field {  display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: space-around; align-items: center; align-content: stretch; flex-grow: 1; flex-basis: 0; cursor: pointer; }
+div.data_card-row div.data_card-row__field.textarea_field-center{  width: 100%; flex-grow: unset; flex-basis: unset; }
+div.data_card-row div.data_card-row__field.textarea_field-center div.card_field__body{  display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: flex-start; align-items: stretch; align-content: stretch; width: 100%; }
+div.data_card-row div.data_card-row__field.textarea_field-center[data-card-field="Oggetto"] div.card_field__body span { min-height: 100px; padding-top: 10px; }
+div.data_card-row div.data_card-row__field.textarea_field-center[data-card-field="Indicazioni"] div.card_field__body span { min-height: 60px; padding-top: 10px; }
+div.data_card-row div.data_card-row__field.textarea_field-center textarea{  display : none; outline: none; resize: none; border-color: rgba(223,225,229,0); padding: 5px; margin-top: 10px; background-color: #ffffff; min-height: 100px; }
+div.data_card-row div.data_card-row__field.textarea_field-center textarea.textare__small{ min-height: 60px; } 
+div.data_card-row__field div.card_field__header { font-weight: 100; font-size: 12px; margin-bottom: 5px; }
+div.data_card-row__field div.card_field__body { font-weight: lighter; font-size: 17px; }
+div.data_card-row__field div.card_field__body span{  padding: 0px 20px; border: solid 1px #d9dadc; color: #2777ba; border-radius: 20px!important; margin-top: 5px; }
+div.data_card-row__field div.card_field__body input { display: none; background-color: transparent; border: none; margin: 0; padding: 0; }
+div.data_card-row__field div.card_field__body select{ display: none; }
+div.data_card-row__field div.card_field__body select.active-field { font-weight: 300; font-size: 15px; }
+div.data_card-row__field div.card_field__body input, div.data_card-row__field div.card_field__body input.active-field { box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28); border-color: rgba(223,225,229,0); border-radius: 24px!important; background-color: #ffffff; outline: none; }
+div.data_card-row div.data_card-row__field input[type=date]{ text-align: center; }
+div.data_card-row__field[data-card-field="TipoAssegnazione"] div.card_field__header{  display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space-around; align-items: stretch; align-content: stretch; }
+div.data_card-row__field[data-card-field="TipoAssegnazione"] div.card_field__header div.card_field__header-item{  background: #2877ba; color: #fff; padding: 5px 20px; display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space-around; align-items: center; align-content: center; }
+div.data_card-row__field[data-card-field="TipoAssegnazione"] div.card_field__header div.card_field__header-item.tipoAssegnazione-disabled { background: #7da3c3; cursor: not-allowed; }
+div.data_card-row__field[data-card-field="TipoAssegnazione"] div.card_field__header div.card_field__header-item.tipoAssegnazione-selected { font-weight: bold; }
+div.data_card-row__field[data-card-field="TipoAssegnazione"] div.card_field__header div.card_field__header-item:first-child{  border-top-left-radius: 20px!important; border-bottom-left-radius: 20px!important; }
+div.data_card-row__field[data-card-field="TipoAssegnazione"] div.card_field__header div.card_field__header-item:last-child{  border-top-right-radius: 20px!important; border-bottom-right-radius: 20px!important; }
+div.data_card-row__field[data-card-field="TipoAssegnazione"] div.card_field__header div.card_field__header-item:not(:last-child){ border-right: 1px solid #d9dadc; }
+div.data_card-row__field[data-card-field="TipoAssegnazione"] div.card_field__body input, div.data_card-row__field[data-card-field="IdFornitore"] div.card_field__body input{  display: flex; outline: none; resize: none; border-color: rgba(223,225,229,0); padding: 5px; background-color: #ffffff; padding-left: 20px; border-radius: 24px!important; }
+
+
+
+div.field_ticket-assegnazione__container{  display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: space-between; align-items: center; align-content: center; width: 100%; padding: 20px 0px; }
+div.field_ticket-assegnazione__container.ticketAssegnazione_search_results div.field_ticket-assegnazione__container-row div.field_ticket-assegnazione__container-row_col:first-child{  display: none; }
+div.field_ticket-assegnazione__container-row{ display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space-around; align-items: center; align-content: center; width: 100%; border-left: solid 1px #d9dadc; border-top: solid 1px #d9dadc; border-right: solid 1px #d9dadc; color: #2877ba; background-color: #ffffff; min-height: 25px; font-weight: 100; font-size: 12px; }
+div.field_ticket-assegnazione__container-row:hover{ font-weight: bold; }
+div.field_ticket-assegnazione__container-row:last-child{ border-bottom: solid 1px #d9dadc; }
+div.field_ticket-assegnazione__container-row.assegnazione-type-2 div.inq_nominativo, div.field_ticket-assegnazione__container-row.assegnazione-type-2 div.ins_inizio, div.field_ticket-assegnazione__container-row.assegnazione-type-2 div.ins_fine, div.field_ticket-assegnazione__container-row.assegnazione-type-2 div.room_number{ display: none; }
+div.field_ticket-assegnazione__container-row.assegnazione-type-3 div.inq_nominativo, div.field_ticket-assegnazione__container-row.assegnazione-type-3 div.ins_inizio, div.field_ticket-assegnazione__container-row.assegnazione-type-3 div.ins_fine{ display: none; }
+div.field_ticket-assegnazione__container-row_col{  flex-grow: 1; flex-basis: 0; display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: center; align-items: center; align-content: center; }
+div.field_ticket-assegnazione__container div.field_ticket-assegnazione__container-row div.field_ticket-assegnazione__container-row_col.inq_nominativo { padding-left: 10px; justify-content: flex-start; }
+div.field_ticket-assegnazione__container div.field_ticket-assegnazione__container-row div.field_ticket-assegnazione__container-row_col.room_number { flex-grow: 0.5; }
+div.field_ticket-assegnazione__container div.field_ticket-assegnazione__container-row div.field_ticket-assegnazione__container-row_col.ta__remove {  flex-grow: 0.3; color: #de3535; }
+
+div.field_ticket-fornitore__container{ display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: space-between; align-items: center; align-content: center; width: 100%; padding: 20px 0px; }
+div.field_ticket-fornitore__container div.field_ticket-fornitore__container-row div.field_ticket-fornitore__container-row_col.tf__remove{ flex-grow: 0.3; color: #de3535; }
+div.field_ticket-fornitore__container div.field_ticket-fornitore__container-row div.field_ticket-fornitore__container-row_col.fornitore_nominativo { padding-left: 10px; justify-content: flex-start; }
+div.field_ticket-fornitore__container.ticketFornitore_search_results div.field_ticket-fornitore__container-row div.field_ticket-fornitore__container-row_col:first-child { display: none; }
+div.field_ticket-fornitore__container-row{ display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space-around; align-items: center; align-content: center; width: 100%; border-left: solid 1px #d9dadc; border-top: solid 1px #d9dadc; border-right: solid 1px #d9dadc; color: #2877ba; background-color: #ffffff; min-height: 25px; font-weight: 100; font-size: 12px; }
+div.field_ticket-fornitore__container-row:hover{ font-weight: bold; }
+div.field_ticket-fornitore__container-row:last-child{ border-bottom: solid 1px #d9dadc; }
+div.field_ticket-fornitore__container-row_col{ flex-grow: 1; flex-basis: 0; display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: center; align-items: center; align-content: center; }
+
+/* Mobile */
+@media (max-width: 992px) {
+  div.data_card-sections div.data_card-sections__section:not(:last-child){  border-right: unset; margin-right: 0px; padding-right: 0px; }
+  div.data_card-row, div.data_card-sections { flex-direction: column }
+  div.data_card-row div.data_card-row__field { margin-bottom: 10px; }
+  div.data_card-sections__section, div.data_card-row div.data_card-row__col, div.data_card-row div.data_card-row__multi-cols, div.data_card-row div.data_card-row__field, div.field_ticket-assegnazione__container-row_col, div.field_ticket-assegnazione__container div.field_ticket-assegnazione__container-row div.field_ticket-assegnazione__container-row_col.room_number, div.field_ticket-assegnazione__container div.field_ticket-assegnazione__container-row div.field_ticket-assegnazione__container-row_col.ta__remove, div.field_ticket-fornitore__container div.field_ticket-fornitore__container-row div.field_ticket-fornitore__container-row_col.tf__remove, div.field_ticket-fornitore__container-row_col { flex-grow: unset; flex-basis: unset; }
+}
+
+/* Accounting Ticket */
+
+div.acct_rows { display: flex; flex-direction: column; align-items: center; align-content: center; justify-content: center; }
+div.acct_rows div.data_card-sections {  width: 60%; margin-bottom: 20px; padding: 10px; background-color: #ffffff; box-shadow: 0 1px 8px 0 rgba(0,0,0,0.15); transform: translateZ(0); border-radius: 20px!important; }
+div.acct_rows div.data_card-sections div.data_card-sections__section:first-child{  flex-grow: 0.1; justify-content: center; align-items: center; align-content: center; color: #F44336; }
+div.acct_rows div.data_card-sections div.data_card-sections__section:first-child i{ padding: 10px; cursor: pointer; }
+div.acct_rows div.data_card-row div.data_card-row__field.textarea_field-center[data-card-field="DescrizioneLavoro"] div.card_field__body span { min-height: 60px; padding-top: 10px; }
+div.acct_rows div.data_card-sections.error_border{ box-shadow : 0 1px 8px 0 rgba(255, 9, 9, 0.4); }
+
+div.acct_summary { margin-bottom: 20px; display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space-around; align-items: center; align-content: center; }
+div.acct_summary div.acct_summary__item { display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: space-around; align-items: center; align-content: center; color: #696f7a; padding: 20px; background: #ffffff; border: 2px solid #d9dadc; }
+div.data_card-row div.data_card-row__field input[type=number]{ padding-left: 15px; max-width: 85px; }
+
+div.acct_summary div.acct_summary__item.serviziBtn{  border: 2px solid #00e872; font-weight: bold; cursor: pointer; }
+
+/* Mobile */
+@media (max-width: 992px) {
+  div.acct_rows div.data_card-sections { width: 95%; }
+  div.acct_rows div.data_card-sections div.data_card-sections__section:first-child { margin-bottom: 10px; flex-grow: unset; flex-basis: unset; }
+  div.acct_summary div.acct_summary__item { padding: 10px; font-weight: lighter; }
+}

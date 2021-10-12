@@ -1,0 +1,653 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : 18-Jan-2017, 11:57:55
+    Author     : Ricardo
+*/
+
+.tm-floating-panel-desktop{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 50;
+  top: -95px;
+  -webkit-transition: 0.2s opacity;
+  transition: 0.2s opacity;
+  width: 740px;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  background-color: #14699B;
+}
+@media (max-width: 800px) {
+  .tm-floating-panel-desktop {
+    z-index: 50000;
+  }
+}
+.tm-floating-panel-desktop__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+}
+
+.tm-floating-panel-desktop.-show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tm-floating-panel-desktop.-hidden {
+  /*left: 100vw;
+  display: none;*/
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.25s, opacity 0.5s linear;
+}
+.tm-floating-panel-desktop__close {
+  width: 36px;
+  height: 51px;
+  color: #464c59;
+  cursor: pointer;
+  overflow: hidden;
+  position: absolute;
+  left: -36px;
+  background: transparent;
+  z-index: 9999;
+}
+.tm-floating-panel-desktop__close:hover {
+  color: #14699B;
+}
+.tm-floating-panel-desktop__close .tm-icon-close {
+  width: 30px;
+  height: 47px;
+  display: block;
+  text-align: center;
+  line-height: 47px;
+  margin-left: 6px;
+  font-size: 18px /* add PX (or original value) as backup */;
+  /*font-size: 1.125rem;*/
+  font-weight: 600;
+  background: #fff;
+  box-shadow: -1px 0px 8px 0px rgba(0,0,0,0.2);
+  border-bottom-left-radius: 4px;
+}
+
+.tm-properties-row__icon, .tm-properties-row__label{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    font-size: 14px;
+}
+
+.tm-properties-row__label{
+  width: 140px;
+}
+
+.tm-properties-row__icon{
+    width: 30px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.tm-properties-row__content{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  max-width: 100%;
+}
+
+.tm-properties-row__content .tm-add-button-box{
+  background-color: transparent;
+  border-radius: 4px;
+  padding-right: 20px;
+  position: relative;
+  cursor: default;
+  padding-left: 4px;
+  margin-left: -4px;
+  /**/
+
+  width: 100%;
+  display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+
+.tm-add-button-box__left{
+  margin-right: 5px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.tm-add-button-panel__input{
+  width: 100%;
+  position: relative;
+  z-index: 1999;
+  height: 30px;
+  line-height: 30px;
+}
+
+.tm-properties-row__content .add-button{
+  height: 30px;
+  width: 30px;
+  border-radius: 4px;
+  background-color: #e6e8ec;
+  text-align: center;
+  cursor: pointer;
+  color: #696f7a;
+}
+
+.tm-add-button-box__right{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+[class*=" tm-icon-"], [class^=tm-icon-]{
+  /*font-family: tw-icon-file;*/
+  speak: none;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+.tm-transaction-properties{
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.tm-transaction-properties__cover-layer-label {
+  z-index: 10000;
+  font-size: 24px /* add PX (or original value) as backup */;
+  /*font-size: 1.5rem;*/
+  color: #464c59;
+}
+
+.tm-transaction-properties-header {
+  padding: 15px;
+  padding-bottom: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.tm-transaction-properties-header .description{
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+.tm-transaction-properties-header__title{
+    text-align: left;
+}
+
+.tm-project-properties__header .description .tm-editable-textfield {
+  font-size: 18px /* add PX (or original value) as backup */;
+  /*font-size: 1.125rem;*/
+  font-weight: 600;
+  color: #464c59;
+  margin-left: -5px;
+}
+
+.tm-floating-panel-body{
+    color: #696f7a;
+    background-color: #fff;
+    box-shadow: -1px 6px 10px 0 rgba(0,0,0,.2);
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.tm-floating-panel-body .description .description-meta{
+    margin: 2px 0 0;
+    font-size: 13px;
+    line-height: 16px;
+    color: #999;
+    text-align: left;
+}
+
+.tm-floating-panel-body .description .description-meta > span.highlight{
+    color: #8d919a;
+    font-weight: 600;
+}
+
+.tm-transaction-properties-body{
+    position: relative;
+}
+
+.tm-transaction-properties .tm-transaction-properties-body{
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+.tm-transaction-properties-body .tm-property-tabs{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.tm-property-tabs{
+    display: inline-block;
+}
+
+.tm-property-tabs__tabs{
+    text-align: left;
+    border-bottom: 1px solid #d4d6db;
+    font-size: 14px;
+    display: inline-block;
+    width: 100%;
+}
+
+.tm-property-tabs__tabs > div.tm-property-tabs__tab.ax-transaction-properties-tab.active{
+    border-bottom: 2px solid #14699b !important;
+}
+
+.tm-property-tabs__tab {
+    width: 244px;
+    height: 40px;
+    background-color: #fff;
+    cursor: pointer;
+    line-height: 40px;
+    display: inline-block;
+    text-align: center;
+}
+
+.tm-property-tabs__content{
+    background-color: rgb(242, 246, 250);
+    position: relative;
+    height: 100%;
+}
+
+.tm-property-tabs__content .tm-transaction-properties-pane{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow-y: auto;
+}
+
+/*
+ * Scrollbar
+ */
+
+.tm-transaction-properties-pane{
+    padding: 15px;
+}
+
+.tm-transaction-properties-pane > div:last-child{
+  margin-bottom: 140px;
+}
+
+.tm-hack-scrollbar{
+    -webkit-overflow-scrolling : touch;
+}
+
+.tm-hack-scrollbar::-webkit-scrollbar{
+    background: transparent;
+    width: 8px;
+    height: 8px;
+}
+
+.tm-hack-scrollbar::-webkit-scrollbar-thumb{
+    background: #b0b4bb;
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+}
+
+.tm-hack-scrollbar::-webkit-scrollbar-track{
+    background: #f5f6f8;
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+}
+
+.tm-properties-description-row{
+    text-align: left;
+}
+
+.tm-properties-description-row__content{
+    margin-left: 5px;
+}
+
+.tm-editable-textarea{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 10px;
+    color: #696f7a;
+}
+
+.tm-editable-textarea__content{
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    word-break: break-word;
+}
+
+.tm-transaction-properties-pane .divider{
+    background-color: #e6e8ec;
+    height: 1px;
+    width: 100%;
+    margin: 10px 0 20px;
+}
+
+.tm-properties-row{
+    min-height: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    font-size: 14px;
+    /*font-size: .875rem;*/
+}
+
+.tm-editable-textarea__importo{
+    -webkit-box-flex: 0;
+    -ms-flex: none;
+    flex: none;
+    width: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+    font-size: 18px /* add PX (or original value) as backup */;
+    /*font-size: 1.6rem;*/
+    color: #31a7aa;
+    line-height: 1;
+    font-weight: 600;
+    color: #ff941d;
+}
+
+.tm-btn {
+  padding: 5px;
+  -webkit-box-flex: 0;
+  -ms-flex: none;
+  flex: none;
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  font-size: 14px /* add PX (or original value) as backup */;
+  /*font-size: 1.6rem;*/
+  background-color: #e6e8ec;
+  cursor: pointer;
+}
+
+.tm-btn__text{
+  margin-left: 4px;
+}
+
+.tm-view-all_intestatari{
+  padding: 5px;
+  -webkit-box-flex: 0;
+  -ms-flex: none;
+  flex: none;
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  font-size: 14px /* add PX (or original value) as backup */;
+  /*font-size: 1.6rem;*/
+  background-color: #e6e8ec;
+  cursor: pointer;
+}
+
+.tm-view-all_intestatari__text{
+  margin-left: 4px;
+}
+
+/*
+ * Intestatario Card - Selezione Giustificativi
+ */
+
+.intestatari-results__row{
+  background-color: #ffffff;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.tm-intestatari-results__row-header__title{
+  text-align: left;
+}
+
+.tm-intestatari-results__row-textarea__content{
+  max-height: 100px;
+  overflow-y: hidden;
+  word-wrap: break-word;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  word-break: break-word;
+}
+
+.tm-intestatari-results__row-textarea__left{
+  -webkit-box-flex: 0;
+  -ms-flex: none;
+  flex: none;
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  font-size: 14px;
+}
+
+.tm-intestatari-results__row-textarea__left-text{
+
+}
+/*
+.intestatari-results__row:last-child{
+    margin-bottom: 10;
+}
+
+.intestatari-results__row:first-child{
+    margin-top: 5px;
+}
+*/
+/* Row Table di tm-hack-scrollbar GLOBAL */
+
+.tm-list{
+    padding: 0 10px 10px;
+    height: 240px;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+}
+
+.tm-input-row:last-child{
+    margin-bottom: 0;
+}
+
+.tm-input-row:first-child{
+    margin-top: 5px;
+}
+
+.tm-input-row{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    border-radius: 3px;
+    background-color: #fff;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+    padding: 0 5px;
+    cursor: pointer;
+}
+
+/*.tm-input-row:hover{
+  background-color: #E6E8EC;
+}*/
+
+.tm-input-row.no-selection, .row-double-line.no-selection{
+  cursor: default !important;
+}
+
+.tm-input-row__left, .tm-input-row__right{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    line-height: 16px;
+}
+
+.tm-input-row__left{
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    margin: 5px;
+}
+
+.tm-input-row__right{
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    color: #8d919a;
+}
+
+.tm-input-row__checkbox{
+    background-color: #fff;
+    box-sizing: border-box;
+    border-radius: 3px;
+    border: 2px solid #d4d6db;
+    height: 18px;
+    width: 18px;
+    margin-right: 10px;
+}
+
+.tm-input-row__checkbox .tm-icon-check-mark-bold{
+    position: relative;
+    left: 1px;
+    top: -1px;
+    color: #fff;
+    visibility: hidden;
+}
+
+.tm-simple{
+    padding: 0 10px;
+    font-size: 15px;
+    /*font-size: .75rem;*/
+    line-height: 21px;
+    height: 21px;
+    border-radius: 100px;
+    margin-right: 5px;
+    font-weight: 500;
+    color: #fff;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+    color: #696f7a;
+}
+
+.tm-simple__text{
+    white-space: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    max-width: 325px;
+}
