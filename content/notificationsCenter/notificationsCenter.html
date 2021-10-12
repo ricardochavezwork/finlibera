@@ -1,0 +1,48 @@
+<div class="layout__content">
+  <div class="actions-panel box-container"></div>
+  <div class="box-container box-filter"></div>
+  <div class="box-container table-results"><section class="box-container_result hack-scrollbar"></section></div>
+
+<script>
+
+$(function (){
+
+    //$('#content').css('width','calc(100% - 10%)');
+
+    /*$('.collapsePopRS').click(function (){
+        var docDefinition = 'This is an sample PDF printed with pdfMake';
+
+        var mail = new Mail();
+        mail.Subject = "Prova OOP 1";
+        mail.Content = "<div>Prova 3</div>";
+        mail.To = "ricardo.chavez.all@gmail.com";
+        mail.From = { Mail : "services@milanostanze.it", Name : "Services IT" };
+        mail.ReplyTo = {  Mail : "services@milanostanze.it", Name : "Services IT"  };
+
+        var pdf = new PDF();
+        pdf.content = docDefinition;
+        pdf.getBase64(function(base64){
+          if (base64) {
+            var att = new Attachment();
+            att.File = base64;
+            att.Title = "Fattura";
+            mail.Attachment = att;
+            mail.Send();
+          }else {
+            console.log("Errore : base64");
+          }
+
+        });
+
+    });*/
+
+    $(function (){
+      $.getScript('./js/notificationsCenter.js', function() {
+          //script is loaded and executed put your dependent JS here
+          //console.log("ok");
+      });
+    });
+
+});
+
+</script>

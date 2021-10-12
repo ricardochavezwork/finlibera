@@ -1,0 +1,24 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jun 20, 2019, 4:30:47 PM
+    Author     : ricardochavez
+*/
+
+.ms-list-wide .kanban-item .tm-list-item .tm-input-row:first-child { margin-top: 0px; padding-top: 10px; }
+
+/* Dimensione Iphone */
+@media(max-width:1000px) {
+    .tm-list-item .tm-input-row { display: grid; }
+    .tm-input-row.chartist-stats{display: grid;justify-content: center;}
+    .tm-input-row.chartist-stats .tm-input-row__info:not(:first-child) {margin-top: 20px;}
+    .tm-input-row.chartist-stats .tm-input-row__info:last-child {margin-bottom: 20px;}
+    .tm-result-movimento{ flex-direction: column; }
+    .row-double-line .tm-simple { margin-right: 0px!important; }
+    .row-double-line .tm-simple { justify-content: flex-start; }
+    .mobile-flex-direction { flex-direction: column!important; }
+    .sendConteggi-column { display: flex !important; flex-direction: row; flex-wrap: nowrap; justify-content: space-around !important; align-items: stretch !important; align-content: center; padding: 10px 0px !important; margin-top: 10px; }
+}

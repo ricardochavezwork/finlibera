@@ -1,0 +1,82 @@
+div.kb-row-v2.tk-row div.tk-col__flag{ display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: center; align-items: center; align-content: stretch; padding: 20px; cursor : pointer; }
+div.kb-row-v2.tk-row div.tk-col__flag span{  padding: 5px 18px; border-radius: 100px !important; font-size: 12px; }
+div.kb-row-v2.tk-row div.tk-col__flag.tk__blocked span{ background-color: rgb(227, 79, 50); color : #ffffff }
+div.kb-row-v2.tk-row div.tk-col__flag.tk__pending span{ background-color: #ffffff; border: solid 1px #f3e113; color: #f3e113; font-weight: bold; }
+div.kb-row-v2.tk-row div.tk-col__flag.tk__open span{ background-color: rgb(94, 233, 39); color : #ffffff }
+div.kb-row-v2.tk-row div.kb-row-v2_info.tk__header, div.kb-row-v2.tk-row div.kb-row-v2_info.tk__bottom { font-size: 12px; font-weight: lighter; color: #c4c8cc; padding: 0px!important; }
+div.kb-row-v2.tk-row div.tk__separator {  display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: center; align-items: center; align-content: center; }
+div.kb-row-v2.tk-row div.tk__body {  font-weight: 500; line-height: 1; display: block!important; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; padding: 10px 0px!important; }
+div.kb-row-v2.tk-row div.tk__assignTo {  font-size: 1.3rem; font-weight: 500; line-height: 1; display: block; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+div.kb-row-v2.tk-row div.tk__separator i{ font-size: 1px!important; min-width: 0px; margin: 0px 10px; }
+
+div.kanban-lists div.kanban-items div.kb-row-v2 div.kb-row-v2_left{ flex-grow: 1; flex-basis: 0; }
+div.kb-row-v2.tk-row div.tk-col__flag{ flex-grow: 0.1; flex-basis: 0; }
+
+/**
+  * BEGIN : Filter
+  */
+
+.tk_filter { display: flex; flex-wrap: wrap; justify-content: flex-start; margin: 15px; padding: 15px; background-color: #FCFCFC; border: 1px solid #e6e8ec;}
+.tk_filter .tk_filter_left-panel{ display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: space-around; align-items: stretch; align-content: flex-start;}
+.tk_filter .tk_filter_right-panel{ display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: space-around; align-items: center; align-content: flex-start; padding: 20px; }
+.tk_filter .tk_filter-btn { width: 75%; background-color: #1e5c86; border: 1px solid #cbcbcb; color: #ffffff; display: flex; padding: 4px; flex-wrap: nowrap; align-items: center; align-content: stretch; border-radius: 20px !important; font-size: 15px; font-weight: normal; cursor: pointer; flex-direction: row; justify-content: center; padding: 6px; }
+.tk_filter .tk_filter_left-row {  display: flex; flex-wrap: nowrap; justify-content: space-between; align-items: stretch; align-content: flex-start; padding: 10px; }
+.tk_filter .tk_filter_left-row.toggleFields_hide { display: none;}
+.tk_filter .tk_filter_left-row .tk_filter_left-row_select {  display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: space-between; align-items: stretch; align-content: stretch; }
+.tk_filter .tk_filter_left-row .tk_filter_left-row_select span{ font-weight: 300; color: #17689b; }
+.tk_filter .tk_filter_left-row .tk_filter_left-row_select select { color: #17689b; }
+.tk_filter .tk_filter_left-row .tk_filter_left-row_input-text { display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space-between; align-items: center; align-content: stretch; }
+.tk_filter .tk_filter_left-row .tk_filter_left-row_input-text span { width: 20px; color: #1e5c85; font-weight: 700; align-items: center; justify-items: center; display: flex; margin-right: 10px; }
+.tk_filter .tk_filter_left-row .tk_filter_left-row_input-text input { margin: 0; line-height: 1.8em; color: #17689b; font-size: 14px; box-sizing: border-box; text-align: left; border: 1px solid #cbcbcb; border-radius: 4px !important; box-shadow: none; font-family: Open Sans, sans-serif; -webkit-box-shadow: none; width: 100%; height: 35px; }
+.tk_filter .tk_filter_left-row .tk_filter_left-row_input-text input.show-icon_enter-text { background: url(../../../../images/keyboard-enter-text.svg) no-repeat scroll 98% 0px; }
+.tk_filter .tk_filter_left-row .tk_filter_left-row_period {  display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: space-between; align-items: stretch; align-content: flex-start; }
+.tk_filter .tk_filter_left-row .tk_filter_left-row_period input {  margin: 0; line-height: 1.8em; color: #17689b; font-size: 14px; box-sizing: border-box; text-align: left; border: 1px solid #cbcbcb; border-radius: 4px !important; box-shadow: none; font-family: Open Sans, sans-serif; -webkit-box-shadow: none; }
+.tk_filter .tk_filter_left-row .tk_filter_left-row_period span { font-weight: 300; color: #17689b; }
+.tk_filter .tk_filter_left-row .tk_filter_left-row_period .tk_filter_left-row_period-top {  display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: space-between; align-items: center; align-content: stretch; }
+.tk_filter .tk_filter_left-row .tk_filter_left-row_period .tk_filter_left-row_period-bottom {  display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space-between; align-items: stretch; align-content: stretch; }
+.tk_filter .tk_filter_toggle-btn {  padding-top: 10px; padding-bottom: 10px; cursor: pointer; display: flex; align-items: center; font-weight: 300; color: #17689b; }
+.tk_filter .tk_filter_left-row .kb_filter_left-row_period{ display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: space-between; align-items: stretch; align-content: flex-start; }
+.tk_filter .tk_filter_left-row .kb_filter_left-row_period-top{ display: flex; flex-direction: column; flex-wrap: nowrap; justify-content: space-between; align-items: center; align-content: stretch; }
+.tk_filter .tk_filter_left-row .kb_filter_left-row_period-top span{ font-weight: 300; color: #17689b; }
+.tk_filter .tk_filter_left-row .kb_filter_left-row_period-bottom { display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space-between; align-items: stretch; align-content: stretch; }
+.tk_filter .tk_filter_left-row .kb_filter_left-row_period-bottom input { margin: 0; line-height: 1.8em; color: #17689b; font-size: 14px; box-sizing: border-box; text-align: left; border: 1px solid #cbcbcb; border-radius: 4px !important; box-shadow: none; font-family: Open Sans, sans-serif; -webkit-box-shadow: none; }
+
+/**
+  * END : Filter
+  */
+
+/* Desktop */
+@media (min-width: 993px) {
+
+  /**
+    * BEGIN : Filter
+    */
+  .tk_filter { flex-direction: column; margin: 0px 15px 15px 15px; }
+  .tk_filter .tk_filter_left-row { flex-direction: row; }
+  .tk_filter .tk_filter_left-row .tk_filter_left-row_input-text { width: 30%; }
+  .tk_filter .tk_filter_left-row .tk_filter_left-row_select { width: 15%; }
+  .tk_filter .tk_filter_left-row .tk_filter_left-row_period { width: 30%; }
+}
+
+/* Mobile */
+@media (max-width: 992px) {
+  div.kb-row-v2.tk-row div.tk-col__flag { padding: 5px; flex-grow: unset; flex-basis: unset; }
+  div.kanban-lists div.kanban-items div.kb-row-v2 div.kb-row-v2_left{ flex-grow: unset; flex-basis: unset; }
+  div.kb-row-v2.tk-row div.tk-col__flag span{ padding: 2px 14px!important; }
+  div.kanban-lists div.kanban-items div.kb-row-v2 div.kb-row-v2_col{ padding: 0px 10px 5px 10px; }
+
+  /**
+    * BEGIN : Filter
+    */
+
+  .tk_filter { flex-direction: column; margin: 0px 0px 10px 0px; }
+  .tk_filter .tk_filter_left-row { flex-direction: column; }
+  .tk_filter .tk_filter_left-row .tk_filter_left-row_input-text { width: 100%; padding: 15px 0px; }
+  .tk_filter .tk_filter_left-row .tk_filter_left-row_select { width: 100%; padding: 5px 0px; }
+  .tk_filter .tk_filter_left-row .tk_filter_left-row_period { width: 100%; }
+  .tk_filter .tk_filter_left-row .tk_filter_left-row_period .tk_filter_left-row_period-top { padding-bottom: 10px; align-items: flex-start;  }
+  .tk_filter .tk_filter_left-panel { width: 100%; }
+  .tk_filter .tk_filter_left-panel .tk_filter_left-row.justify-content_flex-start:nth-child(2n) { flex-direction: column-reverse; }
+  .tk_filter .tk_filter_left-row .tk_filter_left-row_period .tk_filter_left-row_period-bottom { flex-direction: column; }
+  .tk_filter .tk_filter_left-row .tk_filter_left-row_period input:first-child{ margin-bottom: 10px; }
+}

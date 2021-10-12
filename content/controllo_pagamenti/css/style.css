@@ -1,0 +1,5 @@
+.ms-list-wide .kanban-item .tm-list-item .tm-input-row:first-child { margin-top: 0px; padding-top: 10px; }
+
+.row-icon{
+     display: flex; align-content: center; align-items: center; padding: 5px 0px;
+}
